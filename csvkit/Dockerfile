@@ -4,6 +4,8 @@
 #
 # or
 # docker run -i --rm edbizarro/csvkit csvstat < sometxt.csv
+FROM python:3-alpine
+
 ARG BUILD_DATE                                                                                                                                                       
 ARG VCS_REF                                                                                                                                                          
 
@@ -15,7 +17,6 @@ LABEL maintainer="Eduardo Bizarro <edbizarro@gmail.com>" \
   org.label-schema.vcs-url="https://github.com/edbizarro/gitlab-ci-pipeline-php" \
   org.label-schema.vcs-ref=$VCS_REF
 	
-FROM python:3-alpine
 
 RUN apk add --no-cache --virtual .build-deps build-base \
 	&& pip3 install csvkit \
