@@ -21,6 +21,12 @@ LABEL maintainer="Eduardo Bizarro <edbizarro@gmail.com>" \
 
 RUN apk add --no-cache --virtual .build-deps build-base \
 	&& pip3 install csvkit \
-	&& apk del .build-deps
+	&& apk del --purge .build-deps \
+	&& rm -rf /tmp/* \
+		/usr/includes/* \
+		/usr/share/man/* \
+		/usr/src/* \
+		/var/cache/apk/* \
+		/var/tmp/*
 
 WORKDIR /root
