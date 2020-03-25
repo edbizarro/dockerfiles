@@ -4,8 +4,8 @@
 <p align="center" style="margin: 30px 0 35px;">Dockerfiles to make (my) your life easier</p>
 
 <p align="center">
-[![forthebadge](https://forthebadge.com/images/badges/fuck-it-ship-it.svg)](https://forthebadge.com)
-[![forthebadge](https://forthebadge.com/images/badges/60-percent-of-the-time-works-every-time.svg)](https://forthebadge.com)
+  <img src="https://forthebadge.com/images/badges/fuck-it-ship-it.svg" >
+  <img src="https://forthebadge.com/images/badges/60-percent-of-the-time-works-every-time.svg" >
 </p>
 
 > Heavily ~~copied~~ inspired by https://github.com/jessfraz/dockerfiles
