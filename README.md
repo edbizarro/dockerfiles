@@ -16,4 +16,4 @@ Look at each Dockerfile for instructions on how to run the container
 
 | app  | build  | size |
 |---|---|---|
-|  csvkit | ![Docker Build Status](https://img.shields.io/docker/build/edbizarro/csvkit?style=flat-square)  | ![Docker Image Size (latest by date)](https://img.shields.io/docker/image-size/edbizarro/csvkit?sort=date&style=flat-square) |
+|  csvkit | ![Docker Cloud Build Status](https://img.shields.io/docker/cloud/build/edbizarro/csvkit?style=flat-square) | ![Docker Image Size (latest by date)](https://img.shields.io/docker/image-size/edbizarro/csvkit?sort=date&style=flat-square) |
