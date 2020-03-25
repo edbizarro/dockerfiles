@@ -12,6 +12,9 @@
 
 Look at each Dockerfile for instructions on how to run the container
 
-## Conntainers
+## Containers
 
-- csvkit  ![Docker Build Status](https://img.shields.io/docker/build/edbizarro/csvkit?style=flat-square)
+| app  | build  |
+|---|---|
+|  csvkit | ![Docker Build Status](https://img.shields.io/docker/build/edbizarro/csvkit?style=flat-square)  |
+- csvkit  
