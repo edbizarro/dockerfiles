@@ -1,8 +1,9 @@
 <p align="center">
 
-![logo](https://runnable.com/images/production/dockerfile.svg)
+<img src="https://runnable.com/images/production/dockerfile.svg" height="60" >
 
 </p>
+<p align="center" style="margin: 30px 0 35px;">Dockerfiles to make (my) your life easier</p>
 
 
 
