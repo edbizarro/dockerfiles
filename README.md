@@ -1,13 +1,11 @@
 <p align="center">
 
-<img src="https://runnable.com/images/production/dockerfile.svg" height="60" >
+<img src="https://runnable.com/images/production/dockerfile.svg" height="100" >
 
 </p>
 <p align="center" style="margin: 30px 0 35px;">Dockerfiles to make (my) your life easier</p>
 
 
-
-# Dockerfiles
 
 ---
 [![forthebadge](https://forthebadge.com/images/badges/fuck-it-ship-it.svg)](https://forthebadge.com)
