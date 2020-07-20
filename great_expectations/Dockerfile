@@ -1,11 +1,6 @@
-# Run csvkit tools in a container
+# Run great_expectations in a container
 #
-# cat sometext.csv | docker run -i --rm edbizarro/csvkit csvlook
-#
-# or
-#
-# docker run -i --rm edbizarro/csvkit csvstat < sometxt.csv
-FROM python:3-alpine
+FROM python:3-slim
 
 ARG BUILD_DATE                                                                                                                                                       
 ARG VCS_REF                                                                                                                                                          
@@ -17,16 +12,15 @@ LABEL maintainer="Eduardo Bizarro <edbizarro@gmail.com>" \
   org.label-schema.schema-version="1.0" \
   org.label-schema.vcs-url="https://github.com/edbizarro/dockerfiles" \
   org.label-schema.vcs-ref=$VCS_REF
-	
 
-RUN apk add --no-cache --virtual .build-deps build-base \
-	&& pip3 --no-cache-dir -r requirements.txt \
-	&& apk del --purge .build-deps \
-	&& rm -rf /tmp/* \
-		/usr/includes/* \
-		/usr/share/man/* \
-		/usr/src/* \
-		/var/cache/apk/* \
-		/var/tmp/*
+ADD ./requirements.txt ./
 
-WORKDIR /root
+RUN apt-get update -yqq \
+  && apt-get install --no-install-recommends -yqq ca-certificates \
+  && apt-get clean \
+  && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/* /root/.cache \
+  && pip install --upgrade pip \
+  && pip install --no-cache-dir -r requirements.txt
+
+# Run great_expectations
+CMD ["great_expectations"]
